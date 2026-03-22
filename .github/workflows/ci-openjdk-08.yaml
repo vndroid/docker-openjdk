@@ -86,7 +86,7 @@ jobs:
         with:
           push: true
           context: ./${{ env.MAJOR_VERSION }}/
-          tags: ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.ARTIFACTS }}:${{ steps.normalize.outputs.arch_tag }}
+          tags: ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.ARTIFACTS }}:${{ needs.prepare.outputs.pd_ver }}-${{ steps.normalize.outputs.arch_tag }}
   merge:
     name: Create and Push Multi-Arch Manifest
     runs-on: ubuntu-24.04
