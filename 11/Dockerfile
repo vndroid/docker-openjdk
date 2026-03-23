@@ -1,7 +1,7 @@
 FROM alpine:3.21
 # https://github.com/zulu-openjdk/zulu-openjdk/blob/master/alpine/11-latest/Dockerfile
 
-ARG VERSION=11.0.29
+ARG VERSION=11.0.30
 ARG ZULU_KEY_SHA256=6c6393d4755818a15cf055a5216cffa599f038cd508433faed2226925956509a
 
 ENV LANG=en_US.UTF-8
